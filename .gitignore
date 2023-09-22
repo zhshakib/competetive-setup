@@ -1,5 +1,5 @@
 *.exe
 *.out
 
-io/input.txt
-io/output.txt
+Problems/
+io/
