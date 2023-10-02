@@ -17,8 +17,4 @@ int main() {
   return 0;
 }
 
-void solve() {
-  for (int i = 1; i <= 10; ++i) {
-    cout << i + 1 << endl;
-  }
-}
+void solve() {}
