@@ -24,4 +24,21 @@ int main() {
   return 0;
 }
 
-void solve() {}
+void solve() {
+  int n, number;
+  vector<int> even, odd;
+  cin >> n;
+  for (size_t i = 1; i <= n; ++i) {
+    cin >> number;
+    if (number % 2 == 0) {
+      even.push_back(i);
+    } else {
+      odd.push_back(i);
+    }
+  }
+  if (even.size() == 1) {
+    cout << even[0] << endl;
+  } else {
+    cout << odd[0] << endl;
+  }
+}
