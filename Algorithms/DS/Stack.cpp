@@ -33,10 +33,11 @@ int main() {
   push(&height, 2);
   push(&height, 3);
 
-  for (int i = 0; i < 3; i++) {
+  int len = length(height);
+
+  for (int i = 0; i < len; i++) {
     printf("%d\n", height.data[i]);
   }
 
-  printf("%d \n", length(height));
   return 0;
 }
