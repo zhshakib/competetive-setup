@@ -18,6 +18,8 @@ int main() {
     if (address[i] == '.' || i == len - 1) {
       printf("%03d ", atoi(temp));
       counter = 0;
+      // make temp array empty
+      memset(temp, 0, sizeof(temp));
     }
   }
 }
