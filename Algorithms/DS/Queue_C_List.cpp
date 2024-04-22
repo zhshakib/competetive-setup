@@ -5,7 +5,7 @@ int Queue[MAX_LEN];
 int front = 0;
 int rear = -1;
 
-int isEmpty() { return rear == -1; }
+int isEmpty() { return rear < front; }
 int isFull() { return rear == MAX_LEN - 1; }
 
 void enqueue(int item) {
