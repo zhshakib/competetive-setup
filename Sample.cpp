@@ -1,50 +1,27 @@
 #include <bits/stdc++.h>
 using namespace std;
-
-vector<int> merge(vector<int> &left, vector<int> &right) {
-  vector<int> sorted;
-  int i = 0, j = 0;
-  while (i < left.size() && j < right.size()) {
-    if (left[i] < right[j]) {
-      sorted.push_back(left[i]);
-      i++;
-    } else {
-      sorted.push_back(right[j]);
-      j++;
-    }
+#define fastIO()                      \
+  {                                   \
+    ios_base::sync_with_stdio(false); \
+    cin.tie(0);                       \
+    cout.tie(0);                      \
   }
 
-  while (i < left.size()) {
-    sorted.push_back(left[i]);
-    i++;
-  }
-  while (j < right.size()) {
-    sorted.push_back(right[j]);
-    j++;
-  }
-
-  return sorted;
-}
-
-vector<int> merge_sort(vector<int> &arr) {
-  int n = arr.size();
-  if (n <= 1) {
-    return arr;
-  }
-  int mid = n / 2;
-  vector<int> first(arr.begin(), arr.begin() + mid);
-  vector<int> second(arr.begin() + mid, arr.end());
-  first = merge_sort(first);
-  second = merge_sort(second);
-  return merge(first, second);
-}
+void solve();
 
 int main() {
-  vector<int> array = {6, 5, 12, 10, 9, 1};
-  vector<int> sorted = merge_sort(array);
+#ifndef ONLINE_JUDGE
+  freopen("io/input.txt", "r", stdin);
+  freopen("io/output.txt", "w", stdout);
+#endif
+  fastIO();
 
-  for (auto i : sorted) {
-    cout << i << " ";
+  int T = 1;
+  // cin >> T;  // Toggle for testCases!
+  while (T--) {
+    solve();
   }
-  cout << endl;
+  return 0;
 }
+
+void solve() {}
